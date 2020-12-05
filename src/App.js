@@ -1,6 +1,6 @@
 import React from 'react';
-import reactImg from './assets/images/react.jpg';
-import reactSvg from './assets/images/react.svg';
+import reactImg from '@images/react.jpg';
+import reactSvg from '@images/react.svg';
 
 function App() {
   console.log(process.env.NODE_ENV);
