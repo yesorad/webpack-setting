@@ -1,4 +1,4 @@
-# Webpack Setting ( React )
+# React Setting
 
 ## npm install
 
@@ -21,8 +21,8 @@
 ## 디렉토리 구조
 
 ```
-├── build
-├── node_modules
+├── _build
+├── _node_modules
 |
 ├── public
 |   └── index.html
@@ -31,6 +31,9 @@
 |   ├── assets
 |   |   ├── images
 |   |   └── styles
+|   ├── components
+|   ├── containers
+|   ├── pages
 |   ├── App.js
 |   └── index.js
 |

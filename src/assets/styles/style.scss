@@ -2,22 +2,23 @@ $bgColor: #232c34;
 $fontColor: #09d3ac;
 
 body {
-	background: $bgColor;
-	text-align: center;
+  background: $bgColor;
 }
 
-.helloWebpack {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	font-size: 20px;
-	color: $fontColor;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.title {
+  font-size: 20px;
+  color: $fontColor;
 }
 
 .reactImg {
-	position: absolute;
-	width: 100px;
-	height: 100px;
-	margin-top: -80px;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
 }
