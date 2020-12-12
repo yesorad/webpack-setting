@@ -4,9 +4,11 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 
 module.exports = (env) => {
+  const isProduction = env.mode === 'production';
+
   const config = {
     entry: './src/index.js',
-    devtool: env.mode === 'production' ? false : 'sourcemaps',
+    devtool: isProduction ? 'cheap-module-source-map' : 'inline-source-map',
     output: {
       filename: 'bundle.js',
       path: path.resolve(__dirname, 'build'),
@@ -23,6 +25,7 @@ module.exports = (env) => {
     devServer: {
       hot: true,
       host: 'localhost',
+      overlay: true,
       open: true,
       port: 3000,
     },
@@ -61,10 +64,9 @@ module.exports = (env) => {
             {
               loader: 'file-loader',
               options: {
-                name:
-                  env.mode === 'production'
-                    ? '[contenthash].[ext]'
-                    : '[path][name].[ext]',
+                name: isProduction
+                  ? '[contenthash].[ext]'
+                  : '[path][name].[ext]',
                 publicPath: 'assets',
                 outputPath: 'assets',
               },
