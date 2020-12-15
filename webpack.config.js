@@ -28,6 +28,7 @@ module.exports = (env) => {
       overlay: true,
       open: true,
       port: 3000,
+      stats: 'errors-only',
     },
     mode: env.mode,
     module: {
