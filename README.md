@@ -1,5 +1,9 @@
 # React Setting
-
+## version
+```
+# node v12.18.2
+# webpack 4
+```
 ## npm install
 
 ```
